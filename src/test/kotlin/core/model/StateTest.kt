@@ -1,7 +1,7 @@
 package core.model
 
+import io.kotlintest.matchers.types.shouldNotBeSameInstanceAs
 import io.kotlintest.shouldBe
-import io.kotlintest.shouldNotBe
 import org.junit.Test
 
 class StateTest {
@@ -10,8 +10,8 @@ class StateTest {
     fun `toCalculatorState creates a new State`() {
         val curState = State(MutableStack<InputItem>())
         val newState = curState.toCalculatorState()
-        newState shouldNotBe curState
-        newState.stack shouldNotBe curState.stack
+        newState shouldNotBeSameInstanceAs curState
+        newState.stack shouldNotBeSameInstanceAs curState.stack
     }
 
     @Test

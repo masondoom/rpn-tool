@@ -1,7 +1,7 @@
 package core.model
 
+import io.kotlintest.matchers.types.shouldNotBeSameInstanceAs
 import io.kotlintest.shouldBe
-import io.kotlintest.shouldNotBe
 import org.junit.Test
 
 class MutableStackTest {
@@ -67,7 +67,8 @@ class MutableStackTest {
     fun `toMutableStack create a new MutableStack`() {
         val curStack = MutableStack(mutableListOf("a", "b", "c"))
         val newStack = curStack.toMutableStack()
-        newStack shouldNotBe curStack
+        newStack shouldNotBeSameInstanceAs curStack
+        newStack shouldBe curStack
 
         newStack.clear()
         curStack.toString() shouldBe "stack: a b c"
