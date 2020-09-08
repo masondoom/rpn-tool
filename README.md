@@ -1,8 +1,15 @@
 # rpn-tool
 Command-line based Reverse Polish Notation tool.
 
+* supports Math operator (+, -, *, /, sqrt)
+* supports undo and clear operator
+
+Configuration of precision and scale can be found [here](https://github.com/masondoom/rpn-tool/blob/master/src/main/kotlin/com/masondoom/rpntool/core/utils/Constants.kt)
+
 ## Usage
 run start.sh
+
+Note: kotlin cli tool is required.
 ```
 ./start.sh
 ```
