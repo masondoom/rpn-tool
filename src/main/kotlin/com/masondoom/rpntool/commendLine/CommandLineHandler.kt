@@ -8,6 +8,7 @@ class CommandLineHandler(
     private val calculator: Calculator,
     private val inputParser: InputParser
 ) {
+
     fun start() {
         print("Welcome to RPN tool!\n")
         while (true) {
